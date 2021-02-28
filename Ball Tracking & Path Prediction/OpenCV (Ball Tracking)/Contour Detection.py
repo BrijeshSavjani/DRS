@@ -15,7 +15,11 @@ while (video.isOpened()):
     bitwised = cv2.bitwise_and(resized, resized, mask = masked)    
     reduced = cv2.fastNlMeansDenoising(masked,7,7)
     
-    
+    contours ,heirachy = cv2.findContours(reduced, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
+
+    for i in range(0,len(contours)):
+        cv2.drawContours(resized,contours,i,(0,255,0),-3)
+
     cv2.imshow("bitwise",bitwised)
     cv2.imshow("Video", resized)
     if cv2.waitKey(1) & 0xFF == ord('q'):
