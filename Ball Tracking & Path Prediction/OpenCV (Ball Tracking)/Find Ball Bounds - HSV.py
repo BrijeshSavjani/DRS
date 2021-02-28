@@ -2,9 +2,9 @@ import cv2
 import numpy as np
 video = cv2.VideoCapture(R"D:\DRS\test.mp4")
 
-lower_bound = np.uint8([0,32,190])
+lower_bound = np.uint8([0,0,0])
 
-upper_bound = np.uint8([32,255,255])
+upper_bound = np.uint8([179,255,255])
 def Update(x):
      Hue_L = cv2.getTrackbarPos("Hue-L","Controls")
      Saturation_L = cv2.getTrackbarPos("Saturation-L","Controls")
@@ -35,7 +35,6 @@ while (video.isOpened()):
     masked = cv2.inRange(hsv, lower_bound, upper_bound)
     bitsize = cv2.bitwise_and(resized, resized, mask = masked)    
     cv2.imshow("video", resized)
-    cv2.imshow("HSV", hsv)
     cv2.imshow("bitwise",bitsize)
     cv2.imshow("masked", masked)
 
