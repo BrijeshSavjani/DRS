@@ -7,9 +7,10 @@ upper_bound = np.uint8([255,255,255])
 while (video.isOpened()):
     ret, frame = video.read()
     colour_switch = cv2.cvtColor(frame, cv2.COLOR_RGB2BGR)
-    height = video.get(4) * 0.3
-    width = video.get(3) *0.3
-    size = (int(width), int(height))
+    height = int(video.get(4) * 0.3)
+    width = int(video.get(3) *0.3)
+    size = (width, height)
+    blank = np.ones((height,width,3), np.uint8)
     resized = cv2.resize(colour_switch, size)
     masked = cv2.inRange(resized, lower_bound, upper_bound)
     bitwised = cv2.bitwise_and(resized, resized, mask = masked)    
@@ -19,11 +20,11 @@ while (video.isOpened()):
     maximumArea = cv2.contourArea(contours[0])
     for i in range(0,len(contours)):
         area = cv2.contourArea(contours[i])
-        if  int(area) > 1 and int(area) < 9:
-            cv2.drawContours(bitwised,contours,i,(0,255,0),-3)
+        if  int(area) > 1 and int(area) < 12:
+            cv2.drawContours(blank,contours,i,(0,255,0),-3)
             if max([maximumArea,area]) == area:
                 maximumArea = area
-    cv2.imshow("mask",masked)
+    cv2.imshow("Output",blank)
     cv2.imshow("bitwise",bitwised)
     cv2.imshow("Video", resized)
     if cv2.waitKey(1) & 0xFF == ord('q'):
