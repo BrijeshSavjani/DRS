@@ -16,12 +16,14 @@ while (video.isOpened()):
     reduced = cv2.fastNlMeansDenoising(masked,7,7)
     
     contours ,heirachy = cv2.findContours(reduced, cv2.RETR_TREE, cv2.CHAIN_APPROX_SIMPLE)
-
+    maximumArea = cv2.contourArea(contours[0])
     for i in range(0,len(contours)):
-        rect = cv2.minAreaRect(contours[i])
-        box = cv2.boxPoints(rect)
-        box = np.int0(box)
-        cv2.drawContours(bitwised,[box],0,(0,255,0),2)
+        area = cv2.contourArea(contours[i])
+        if  int(area) > 1 and int(area) < 9:
+            cv2.drawContours(bitwised,contours,i,(0,255,0),-3)
+            if max([maximumArea,area]) == area:
+                maximumArea = area
+    cv2.imshow("mask",masked)
     cv2.imshow("bitwise",bitwised)
     cv2.imshow("Video", resized)
     if cv2.waitKey(1) & 0xFF == ord('q'):
