@@ -5,8 +5,8 @@ This section will go over how to use the ball bounding detectors. This will prob
 This will entirely depend on the colour of the ball using,the backdrop, the ground(pitch) under the ball. So I reccomend trying both and using the best one of the two. 
 
 <h2>How to use</h2>
-As you will see there is a control panel:
-
+As you will see there is a control panel:</br>
+<img src = "Controls.png"/>
 Simpily adjust the minimum and maximum values until the ball is the main item you can see in the frame and it continues to be as the video returns through. The goal is to make so the ball is the only thing you can see. But don't worry about small false positivies as theese are filtered out during the contour detection process.
 
 I would recomend the following steps to help you:
