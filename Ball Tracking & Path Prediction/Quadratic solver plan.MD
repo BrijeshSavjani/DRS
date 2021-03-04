@@ -10,6 +10,7 @@
   <li>b = (y - c)/k</li>
   <li>Substitute a and c to work out b.</li>
 <ol>
-
+  </br>
 n = ((x[0]^2 + x[0]))- (x[1]^2 + x[1]))
+  </br>
 k = (x[0]n - x[1]n)
