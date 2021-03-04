@@ -1,5 +1,4 @@
-General form is ax^2 + bx + c = y
-3 co-ordinates
+3 co-ordinates per iteration. End is averaged out
 <ol>
   <li>Substitue X in. </li>
   <li>Subtract c from both to be left with ax^2 + bx = y</li>
@@ -11,3 +10,6 @@ General form is ax^2 + bx + c = y
   <li>b = (y - c)/k</li>
   <li>Substitute a and c to work out b.</li>
 <ol>
+
+n = ((x[0]^2 + x[0]))- (x[1]^2 + x[1]))
+k = (x[0]n - x[1]n)
