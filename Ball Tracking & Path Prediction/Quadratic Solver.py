@@ -10,7 +10,13 @@ class Equation:
         self.B *= factor
         self.C *= factor
         self.Y *= factor
-
+def subtract(orignal, subtract):
+    result = orignal
+    result.A -= subtract.A
+    result.B -= subtract.B
+    result.C -= subtract.C
+    result.Y -= subtract.Y
+    return result
 #User Input
 equations_invalid = True
 while equations_invalid:
@@ -22,3 +28,4 @@ while equations_invalid:
         equations_invalid = False
     except:
         print("Incorrect input")
+r = subtract(eq1,eq2)
