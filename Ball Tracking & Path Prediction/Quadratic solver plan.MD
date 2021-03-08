@@ -17,12 +17,12 @@ k = (x[0]z - x[1]z)
 </br>
 z = (x[0]^2)/(x[1]^2)
 
-Notes:
-Step 3 can't allways be factored out since:
-Coefficient of A : (x[0]^2 - x[1]^2)
-Coefficient of B: (x[0] - x[1])
-(x[0]^2 - x[1]^2) = (x[0] + x[1])(x[0] - x[1])
-(x[0]^2 - x[1]^2) /  (x[0] - x[1]) = (x[0] + x[1])
-so equation turns out to be:
-h((x[0]+x[1])a + b) where h = x[0] - x[1])
-So algorithm needs to be rewritten
+Notes:</br>
+Step 3 can't allways be factored out since:</br>
+Coefficient of A : (x[0]^2 - x[1]^2)</br></br>
+Coefficient of B: (x[0] - x[1])</br>
+(x[0]^2 - x[1]^2) = (x[0] + x[1])(x[0] - x[1])</br>
+(x[0]^2 - x[1]^2) /  (x[0] - x[1]) = (x[0] + x[1])</br>
+so equation turns out to be:</br></br>
+h((x[0]+x[1])a + b) where h = x[0] - x[1])</br>
+So algorithm needs to be rewritten</br>
