@@ -1,14 +1,14 @@
 3 co-ordinates per iteration. End is averaged out
 <ol>
   <li>Substitue X in. </li>
-  <li>Subtract c from both to be left with ax^2 + bx = y</li>
-  <li>factorise out (a + b) to get (a + b) = y/{n}</li>
-  <li>Factorise (a + b) in final equation. Substitue with y/{n} calculate c.</li>
-  <li>Substitute C into first 2 equations.</li>
-  <li>ax^2 +bx = y -c</li>
-  <li>Multiply out to equivocate a</li>
-  <li>b = (y - c)/k</li>
-  <li>Substitute a and c to work out b.</li>
+  <li>Subtract c from first two equations to be left with ax^2 + bx = y</li>
+  <li>Factorise out na + b = y where n is some constant</li>
+  <li>Repeate the same steps with equations 2 & 3 instead of 1 & 2</li>
+  <li>Subtract out b from two resultanmts</li>
+  <li>Substitute new found value for a into first equation to calculate b</li>
+  <li>Substitue a & b into fiest equation to calculate c</li>
+  <li> Return all values</li>
+  
 <ol>
   </br>
 n = ((x[0]^2 + x[0]))- (x[1]^2 + x[1]))
@@ -17,12 +17,4 @@ k = (x[0]z - x[1]z)
 </br>
 z = (x[0]^2)/(x[1]^2)
 
-Notes:</br>
-Step 3 can't allways be factored out since:</br>
-Coefficient of A : (x[0]^2 - x[1]^2)</br></br>
-Coefficient of B: (x[0] - x[1])</br>
-(x[0]^2 - x[1]^2) = (x[0] + x[1])(x[0] - x[1])</br>
-(x[0]^2 - x[1]^2) /  (x[0] - x[1]) = (x[0] + x[1])</br>
-so equation turns out to be:</br></br>
-h((x[0]+x[1])a + b) where h = x[0] - x[1])</br>
-So algorithm needs to be rewritten</br>
+
