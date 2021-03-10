@@ -12,12 +12,22 @@
   
 <h3>General example</h3>
 <h5>Initial equations</h5>
-<ul
+<ul>
 <li>aX[0]^2 + bX[0] + c = Y[0]</li>
 <li>aX[1]^2 + bX[1] + c = Y[1]</li>
 <li>aX[2]^2 + bX[2] + c = Y[2]</li>
 </ul>
 <p><i> Where X and Y are inputs provided by the user</i></p>
+
+<h3> Subtraction results</h3>
+<p><b>Equations 1 & 2</b></p>
+a(X[0] + X[1]) + b = (Y[0] - Y[1]) / (X[0] - X[1])
+
+<p><b>Equations 2 & 3</b></p>
+a(X[1] + X[2]) + b = (Y[1] - Y[2]) / (X[1] - X[2])
+
+<p><b>Subntraction of the two results</b></p>
+a(X[0] - X[2]) = ((Y[0] - Y[1]) / (X[0] - X[1])) - ((Y[1] - Y[2]) / (X[1] - X[2]))
   </br>
 
 
