@@ -21,11 +21,15 @@ def subtract(orignal, subtract):
 equations_invalid = True
 while equations_invalid:
     try:
-        values = input("Enter x and y in the form x,y").split(",")
-        values2 = input("Enter x and y in the form x,y").split(",")
-        eq1 = Equation(float(values[0]),float(values[1]))
-        eq2 = Equation(float(values2[0]),float(values2[1]))
+        X = input("Enter x values in the form X1,X2,X3").split(",")
+        Y = input("Enter y values in the form Y1,Y2,Y3").split(",")
+        eq1 = Equation(float(X[0]),float(Y[0]))
+        eq2 = Equation(float(X[1]),float(Y[1]))
+        eq3 = Equation(float(X[2]),float(Y[2]))
         equations_invalid = False
     except:
         print("Incorrect input")
-r = subtract(eq1,eq2)
+r1 = subtract(eq1,eq2)
+r2 = subtract(eq2,eq3)
+r1.multiply((X[0] - X[1])**-1)
+r2.multiply((X[0] - X[1])**-1)
