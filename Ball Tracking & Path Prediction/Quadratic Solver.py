@@ -1,5 +1,3 @@
-from decimal import *
-import decimal
 class Equation:
     def __init__(self,x,y):
         #Coefficients of the letter. 
