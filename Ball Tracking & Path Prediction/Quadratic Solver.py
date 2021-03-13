@@ -34,8 +34,8 @@ r1.multiply((float(X[0]) - float(X[1]))**-1) #Divide out by (x[0] - x[1]) to get
 r2.multiply((float(X[1]) - float(X[2]))**-1) #Same but for second equation
 r3 = subtract(r1,r2) # Remove +b by subrtacting both equations to be left whith na = k
 r3.multiply((r3.A ** -1)) #Divide by coefficent of A
+eq1 = Equation(float(X[0]),float(Y[0])) #Reset eq1 as python passes by reference
 A = r3.Y #Set value of A 
 B =r2.Y - (A * r2.A) #Substitue value of A into r2 and calculate C
-eq1 = Equation(float(X[0]),float(Y[0])) #Reset eq1 as python passes by reference
 C = eq1.Y - ((eq1.A * A) + (eq1.B * B)) #Sub a & b into eq1 to calculate C
 print(A, B, C)
