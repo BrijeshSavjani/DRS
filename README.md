@@ -48,3 +48,5 @@ This is a simplified plan. I will add the full plans and flow charts that I drew
   - New quadratic is calculated from root and turning point (Calculated using velocity (Max-height))
  5) Time is plugged into all equations & value is stored.
  6) Co-ordinaete of stored ball is compared to position of stumps. If it's hitting then the batsman in adjudged out.
+
+NOTE: Development has temporarily halted as I need reference footage from front on to continue and I can currently not go and generate this. Will restart as soon as possible
